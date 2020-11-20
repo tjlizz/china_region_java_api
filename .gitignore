@@ -12,7 +12,7 @@ target/
 .settings
 .springBeans
 .sts4-cache
-src/main/resources/config/application-test.yml
+src/main/resources/config/application-prod.yml
 ### IntelliJ IDEA ###
 .idea
 *.iws

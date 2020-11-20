@@ -1,0 +1,7 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://cdb-n7awaf8u.bj.tencentcdb.com:10029/china_region?characterEncoding=utf8&useSSL=false
+    username: lizeze
+    password: 123456
