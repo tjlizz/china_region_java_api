@@ -1,7 +1,9 @@
-![](https://img.shields.io/badge/spring--boot-2.4.0-brightgreen)
-![](https://img.shields.io/badge/lombok-1.16.20-brightgreen)
-![](https://img.shields.io/badge/mybatis--plus--boot--starter-3.4.1-brightgreen)
-![](https://img.shields.io/badge/jdk-1.8-brightgreen)
+
+ 
+[![](https://img.shields.io/badge/spring--boot-2.4.0-brightgreen)](https://spring.io/projects/spring-boot)
+[![](https://img.shields.io/badge/lombok-1.16.20-brightgreen)](https://projectlombok.org/setup/maven)
+[![](https://img.shields.io/badge/mybatis--plus--boot--starter-3.4.1-brightgreen)](https://baomidou.com/)
+
 # 简介
 全国行政区域api， 包括省，市，区，县，镇，街道
 
