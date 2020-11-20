@@ -1,7 +1,4 @@
 
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.11.57:3306/china_region?characterEncoding=utf8&useSSL=false
-    username: lizeze
-    password: 123456
+  profiles:
+    active: dev
