@@ -13,4 +13,6 @@ public interface RegionService {
 
     List<RegionModel> getList(String parentId);
 
+    void  inserts(List<RegionModel> list);
+
 }

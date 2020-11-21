@@ -1,5 +1,6 @@
 package com.github.lizeze.china_regionapi.model;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -16,7 +17,7 @@ import lombok.Setter;
 @Setter
 public class RegionModel {
 
-    @TableId
+    @TableId(type = IdType.ASSIGN_ID)
     @TableField("region_id")
     private String regionId;
     @TableField

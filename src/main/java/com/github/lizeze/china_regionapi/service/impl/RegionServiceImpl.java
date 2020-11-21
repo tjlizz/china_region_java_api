@@ -31,4 +31,12 @@ public class RegionServiceImpl implements RegionService {
         map.put("parent_id", parentId);
         return regionMapper.selectByMap(map);
     }
+
+    @Override
+    public void inserts(List<RegionModel> list) {
+        for (int i = 0; i < list.size(); i++) {
+
+            regionMapper.insert(list.get(i));
+        }
+    }
 }
