@@ -3,6 +3,7 @@ package com.github.lizeze.china_regionapi.service;
 import com.github.lizeze.china_regionapi.model.RegionModel;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author zeze.li
@@ -13,6 +14,10 @@ public interface RegionService {
 
     List<RegionModel> getList(String parentId);
 
-    void  inserts(List<RegionModel> list);
+    List<RegionModel> getList(Map<String, Object> map);
+
+    void inserts(List<RegionModel> list);
+
+    List<RegionModel> getDownloadData();
 
 }
