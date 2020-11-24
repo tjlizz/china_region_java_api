@@ -1,6 +1,7 @@
 package com.github.lizeze.china_regionapi.api;
 
 import com.github.lizeze.china_regionapi.service.PostCodeService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

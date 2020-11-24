@@ -1,5 +1,6 @@
 package com.github.lizeze.china_regionapi.api;
 
+import com.github.codeinghelper.util.StringUtil;
 import com.github.lizeze.china_regionapi.model.RegionModel;
 import com.github.lizeze.china_regionapi.service.RegionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,17 +24,17 @@ public class RegionController {
     @Autowired
     private RegionService regionService;
 
-    @GetMapping("/")
-    public ResponseEntity getList(@RequestParam(name = "parentId") String parentId) {
-
-
-        return ResponseEntity.status(HttpStatus.OK).body(regionService.getList(parentId));
+    @GetMapping("/{parentId}")
+    public ResponseEntity getList(@PathVariable("parentId") String parentId, @RequestParam(name = "level", required = false) String level) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("parent_id", parentId);
+        if (!StringUtil.isEmptyOrNull(level))
+            map.put("level", level);
+        return ResponseEntity.status(HttpStatus.OK).body(regionService.getList(map));
     }
 
     @PostMapping("/")
     public ResponseEntity insert(@RequestBody List<RegionModel> list) {
-
-
         regionService.inserts(list);
         return ResponseEntity.status(HttpStatus.OK).body("");
     }
