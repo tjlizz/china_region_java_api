@@ -16,40 +16,25 @@
  ## 获取行政区域数据
 
  
-   GET  `http://localhost:8080/api/region/?parentId=100000`
+   GET  `http://localhost:8080/api/region/{parentId}?level={level}`
    
-   `parentId`为父节点编号
+ *  `parentId`为父节点编号
    
-   * 返回结果
-   ```json
-[
-    {
-        "name": "北京市",
-        "code": "110000",
-        "level": "province",
-        "parentId": "100000"
-    },
-    {
-        "name": "天津市",
-        "code": "120000",
-        "level": "province",
-        "parentId": "100000"
-    },
-    {
-        "name": "河北省",
-        "code": "130000",
-        "level": "province",
-        "parentId": "100000"
-    }
-]
-```
-
+ *  `level`为请求数据的级别(**非必填**)
+     
+     `province`  `city`  `district`  `street`
+      
+    
+   
+   调用方式
+   ![](./img/a.png)
+  > level 字段非必填，但是在请求直辖市数据的时候可能会有数据重复的问题,如果不添加的话需要在显示的时候单独处理一下，如果加上之后可以避免这个问题
 ## 获取区域邮政编码与区号
 POST `http://localhost:8080/api/postcode/`
 
 调用方式
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5db4e6eec50e4abb9f1dfed32bd2da6f~tplv-k3u1fbpfcp-watermark.image)
- 
+
+  ![](./img/b.png) 
 
 
 
